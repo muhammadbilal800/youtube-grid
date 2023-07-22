@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,900&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    transition: 0.5s ease;
+    text-decoration: none;
+   
 }
 section{
     width: 100%;
@@ -10,52 +12,56 @@ section{
 .container{
     max-width: 870px;
     margin: auto;
-    position: relative;
+    padding: 30px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
-
 }
-.mybox{
+.container .mybox{
+    background-color: transparent;
     border: 2px gray ;
-    border-radius: 10px;
-    background-color: #cdcdcd;
+}
+.box{
+    background-image: url(./image.jpg);
+    width: 300px;
+    height: 230px;
+    background-position: center;
+    background-size: cover;
+    border: 2px gray solid;
+    border-radius: 15px;
     overflow: hidden;
-    
     position: relative;
+    margin-bottom: 8px;
+    display: flex;
+}
+.box span{
+    border: 2px rgba(0, 0, 0, 0.685) solid;
+    background-color: rgba(0, 0, 0, 0.715);
+    border-radius: 5px;
+    color: white;
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+    opacity: 1;
+}
+.box:hover span{
+    opacity: 0;
+}
+.sub-box ul .icon{
+    border: 2px gray solid;
+    border-radius: 20px;
+    padding: 4px;
+    background-color: black;
+    color: white;
+    
+}
+.sub-box ul a{
+    font-weight: 500px bold;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+   
     
 }
 
-img{
-    width: 100%;
-    border-radius: 10px;
-    height: 250px;
-    
-}
-p{
-    padding: 10px;
-}
-.overlay{
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: black;
-    opacity: 0;
-    transition: 0.5s ease;
-    transform: translateY(101%);
-    
-}
-ul a{
-    color: #f1f1f1;
-    margin-right: 10px;
-    font-size: 30px;
-}
-.mybox:hover .overlay{
-    opacity: 1;
-   transform: translateY(0%);
-}
+
+
